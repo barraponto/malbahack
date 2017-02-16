@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'eval-source-map',
-  // Use path.join para evitar problemas com o Windows
   entry: path.join(__dirname, 'src', 'index.js'),
   output: {
     path: path.join(__dirname, 'dist'),
@@ -15,7 +14,6 @@ module.exports = {
       {
         test: /\.(js|vue)/,
         enforce: 'pre',
-        // configurações em .eslintrc.js
         use: [{loader: 'eslint-loader'}],
       },
       {
@@ -26,7 +24,6 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        // configurações em .babelrc
         use: [{loader: 'babel-loader'}],
       },
       {
@@ -35,10 +32,8 @@ module.exports = {
           {loader: 'style-loader'},
           {
             loader: 'css-loader',
-            // roda 1 loader anterior (postcss) nos css @importados também.
             options: {importLoaders: 1, sourceMap: true},
           },
-          // configuração em postcss.config.js
           {loader: 'postcss-loader'},
         ],
       },
