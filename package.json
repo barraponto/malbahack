@@ -6,6 +6,7 @@
   "scripts": {
     "webpack": "webpack",
     "dev-server": "webpack-dev-server --hot --content-base ./dist",
+    "data": "m2j --content --outfile src/data.json data/*.md",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
