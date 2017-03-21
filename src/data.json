@@ -1,0 +1,34 @@
+{
+  "activismo": {
+    "title": "Activismo",
+    "pictures": [
+      {
+        "file": "01-Ruiz-Durand.jpg",
+        "author": "Jesús Ruiz Durand",
+        "blurb": "De la serie \"Reforma Agraria\""
+      },
+      {
+        "file": "01-Jitrik.jpg",
+        "author": "Magdalena Jitrik",
+        "blurb": "Federación Libertaria Argentina, 1997-2001"
+      }
+    ],
+    "preview": "Término que designa a una práctica artística y política orientada a …",
+    "content": "\nTérmino que designa a una práctica artística y política orientada a contribuir al cambio social. El activismo artístico no es necesariamente coincidente con la militancia política o partidaria, puesto que las acciones que lo integran se realizan en y desde el campo de la cultura; no obstante, en todos los casos subyace la intención de que la visibilidad de estas acciones desborde ese ámbito específico para tener consecuencias en la más amplia esfera pública. Entre las variantes del activismo pueden distinguirse dos estrategias principales: el frentismo (que consiste en la unión de un grupo de artistas o agentes culturales para manifestar su desacuerdo respecto de una situación) o el activismo de la obra (donde el sentido que ella propone está determinado por su vínculo con un hecho político). Si bien la noción de activismo es inseparable del desarrollo de la modernidad, también supone una interpenetración entre arte y política que pone en cuestión el relato de la autonomía enarbolado por ciertos relatos sobre el arte moderno; en ese sentido, el activismo se alinea con la genealogía de la vanguardia que supone la supresión de la distancia entre arte y vida.\n",
+    "basename": "activismo"
+  },
+  "critica-cultural": {
+    "title": "Crítica Cultural",
+    "pictures": [
+      {
+        "file": "21-Nelly-Richard, 1986. Fotografía de Inés Paulino.jpg",
+        "author": null,
+        "blurb": "Nelly Richard, 1986. Fotografía de Inés Paulino"
+      }
+    ],
+    "preview": "Concepto propuesto por la intelecual franco-chilena Nelly Richard. …",
+    "content": "\nConcepto propuesto por la intelecual franco-chilena Nelly Richard. El término surge de las observaciones que Richard planteó al campo de los estudios culturales: conformado en el interior de las universidades norteamericanas, su transformación en una “moda académica” de exportación trajo aparejado el borramiento de la densidad histórica en América Latina y la pérdida de muchas tradiciones intelectuales locales, tales como el ensayismo crítico. De este modo, los estudios culturales terminaron por construir una “industria del paper” que facilitó la homogeinización cultural a partir de la generalización de lenguajes y marcos de análisis. Para hacer frente a esta situación Richard propone la noción de crítica cultural, que consiste en una articulación de diferentes perspectivas (como la filosofía de la deconstrucción, la teoría crítica y el neoensayismo) a partir de las cuales explorar los bordes de mayor disgregación institucional, donde se formulan prácticas y estéticas “menores” que no encajan con las categorizaciones normalizadas de los estudios culturales. Esta perspectiva permite pensar en modalidades disruptivas respecto de la distribución del poder operada por el paradigma monocultural de la razón occidental dominante.\n",
+    "basename": "critica-cultural"
+  }
+}
+

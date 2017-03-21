@@ -1,8 +1,12 @@
 <script>
+  import data from '../data.json';
+
   export default {
     name: 'App',
     data() {
-      return {};
+      return {
+        data,
+      };
     },
     methods: {
       log() {
