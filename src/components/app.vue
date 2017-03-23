@@ -1,6 +1,9 @@
 <script>
   import data from '../data.json';
 
+  // eslint-disable-next-line no-console
+  console.log(data);
+
   export default {
     name: 'App',
     data() {
@@ -8,19 +11,26 @@
         data,
       };
     },
-    methods: {
-      log() {
-        // eslint-disable-next-line no-console
-        console.log('it is working');
-      },
-    },
   };
 </script>
 
 <template>
-  <p v-on:click="log">Hello World</p>
+  <main class="malbahack">
+    <h1>Malbahack</h1>
+    <nav>
+      <a v-for="item in data">
+        {{item.title}}
+      </a>
+    </nav>
+  </main>
 </template>
 
 <style>
-  p { color: rebeccapurple; }
+  .malbahack {
+    & nav {
+      & a {
+        display: block;
+      }
+    }
+  }
 </style>
