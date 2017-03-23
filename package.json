@@ -44,7 +44,7 @@
     "neutrino-preset-eslint-google": "^1.0.0",
     "neutrino-preset-stylelint-standard": "^1.0.0",
     "neutrino-preset-web": "^4.2.3",
-    "postcss-cssnext": "^2.9.0"
+    "postcss-cssnext": "^2.10.0"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
