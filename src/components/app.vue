@@ -1,9 +1,6 @@
 <script>
   import data from '../data.json';
 
-  // eslint-disable-next-line no-console
-  console.log(data);
-
   export default {
     name: 'App',
     data() {
@@ -18,10 +15,12 @@
   <main class="malbahack">
     <h1>Malbahack</h1>
     <nav>
-      <a v-for="item in data">
+      <router-link v-for="item in data" :key="item.basename"
+        :to="{ name: 'entry', params: { id: item.basename } }">
         {{item.title}}
-      </a>
+      </router-link>
     </nav>
+    <router-view></router-view>
   </main>
 </template>
 
