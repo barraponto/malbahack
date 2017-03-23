@@ -6,7 +6,7 @@ import UI from './components/app.vue';
 document.addEventListener('DOMContentLoaded', function() {
   // eslint-disable no-new
   new Vue({
-    el: '#app',
+    el: '#root',
     render: (h) => h(UI),
   });
 });
