@@ -47,8 +47,8 @@
     "postcss-cssnext": "^2.9.0"
   },
   "dependencies": {
-    "@barraponto/markdown-to-json": "^0.6.0",
     "bootstrap": "^3.3.7",
+    "markdown-to-json": "^0.5.1",
     "neutrino-preset-postcss": "^1.0.0",
     "neutrino-preset-vue": "^1.0.1",
     "vue": "^2.2.4"
