@@ -1,17 +1,10 @@
 <script>
-  import data from '../data.json';
-
   export default {
     name: 'Entry',
     data() {
       return {};
     },
-    props: ['id'],
-    computed: {
-      entry() {
-        return data[this.id];
-      },
-    },
+    props: ['id', 'entry'],
   };
 </script>
 
