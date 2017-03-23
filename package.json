@@ -42,15 +42,14 @@
   "devDependencies": {
     "neutrino": "^4.3.1",
     "neutrino-preset-eslint-google": "^1.0.0",
+    "neutrino-preset-postcss": "^1.0.0",
     "neutrino-preset-stylelint-standard": "^1.0.0",
+    "neutrino-preset-vue": "^1.0.3",
     "neutrino-preset-web": "^4.2.3",
     "postcss-cssnext": "^2.10.0"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
     "markdown-to-json": "^0.5.1",
-    "neutrino-preset-postcss": "^1.0.0",
-    "neutrino-preset-vue": "^1.0.1",
     "vue": "^2.2.4"
   }
 }

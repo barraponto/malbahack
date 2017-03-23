@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.css';
 import Vue from 'vue';
 import UI from './components/app.vue';
 
