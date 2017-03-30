@@ -9,22 +9,14 @@
     "data": "m2j --content --outfile src/data.json data/*.md",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "postcss": {
-    "plugins": {
-      "postcss-cssnext": {}
-    }
-  },
-  "config": {
-    "presets": [
+  "neutrino": {
+    "use": [
       "neutrino-preset-eslint-google",
       "neutrino-preset-stylelint-standard",
       "neutrino-preset-web",
-      "neutrino-preset-postcss",
+      "neutrino-preset-cssnext",
       "neutrino-preset-vue"
-    ],
-    "stylelint": {
-      "extends": "stylelint-config-standard"
-    }
+    ]
   },
   "repository": {
     "type": "git",
@@ -40,17 +32,17 @@
   },
   "homepage": "https://github.com/barraponto/webpack-config#readme",
   "devDependencies": {
-    "neutrino": "^4.3.1",
-    "neutrino-preset-eslint-google": "^1.0.0",
-    "neutrino-preset-postcss": "^1.0.0",
-    "neutrino-preset-stylelint-standard": "^1.0.0",
-    "neutrino-preset-vue": "^1.0.3",
-    "neutrino-preset-web": "^4.2.3",
-    "postcss-cssnext": "^2.10.0"
+    "eslint": "^3.18.0",
+    "neutrino": "^5.0.2",
+    "neutrino-preset-cssnext": "^1.1.1",
+    "neutrino-preset-eslint-google": "^2.0.1",
+    "neutrino-preset-stylelint-standard": "^2.0.0",
+    "neutrino-preset-vue": "^2.0.2",
+    "neutrino-preset-web": "^5.0.2"
   },
   "dependencies": {
     "markdown-to-json": "^0.5.1",
-    "vue": "^2.2.4",
+    "vue": "^2.2.6",
     "vue-router": "^2.3.0"
   }
 }
