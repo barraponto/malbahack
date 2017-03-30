@@ -5,7 +5,7 @@ import data from '../data.json';
 Object.keys(data).forEach((key) => {
   data[key].pictures.forEach(
     (picture) => Object.assign(picture,
-      {file: require(`../../data/${picture.file}`)}));
+      {file: require(`../../data/images/${picture.file}`)}));
 });
 
 export default new VueRouter({
