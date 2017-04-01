@@ -32,8 +32,8 @@
   },
   "homepage": "https://github.com/barraponto/webpack-config#readme",
   "devDependencies": {
-    "eslint": "^3.18.0",
-    "neutrino": "^5.1.0",
+    "eslint": "^3.19.0",
+    "neutrino": "^5.1.1",
     "neutrino-preset-cssnext": "^1.1.1",
     "neutrino-preset-eslint-google": "^2.0.1",
     "neutrino-preset-stylelint-standard": "^2.0.0",
@@ -43,7 +43,8 @@
   },
   "dependencies": {
     "markdown-to-json": "^0.5.1",
+    "normalize.css": "^6.0.0",
     "vue": "^2.2.6",
-    "vue-router": "^2.3.0"
+    "vue-router": "^2.3.1"
   }
 }
