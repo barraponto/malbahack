@@ -1,3 +1,4 @@
+import 'normalize.css';
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import UI from './components/app.vue';
