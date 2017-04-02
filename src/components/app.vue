@@ -19,10 +19,13 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    padding: 1em;
 
     & h1 {
       font-family: 'Brazil Pixo Reto', 'sans-serif';
-      margin: 0;
+      font-weight: normal;
+      font-size: 2.6em;
+      margin: 0 0 0.33em;
     }
   }
 </style>

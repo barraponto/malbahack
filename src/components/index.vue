@@ -22,6 +22,11 @@
     & nav {
       & a {
         display: block;
+        font-family: 'Brazil Pixo Reto';
+        font-size: 2.6em;
+        line-height: 1em;
+        text-decoration: none;
+        margin: 0.33em 0;
       }
     }
   }
