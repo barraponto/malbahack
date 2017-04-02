@@ -1,5 +1,6 @@
 import VueRouter from 'vue-router';
 import Entry from './entry.vue';
+import Index from './index.vue';
 import data from '../data.json';
 
 Object.keys(data).forEach((key) => {
@@ -10,6 +11,12 @@ Object.keys(data).forEach((key) => {
 
 export default new VueRouter({
   routes: [
+    {
+      name: 'index',
+      path: '/',
+      component: Index,
+      props: {data},
+    },
     {
       name: 'entry',
       path: '/entry/:id',

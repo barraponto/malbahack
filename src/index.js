@@ -7,7 +7,6 @@ import router from './components/router';
 Vue.use(VueRouter);
 
 document.addEventListener('DOMContentLoaded', function() {
-  // eslint-disable no-new
   new Vue({
     router,
     el: '#root',
