@@ -25,6 +25,7 @@
       font-family: 'Cabin', sans-serif;
       line-height: 1.33em;
       letter-spacing: 0.033em;
+      margin-bottom: 1em;
     }
 
     & img {
@@ -33,7 +34,17 @@
     }
 
     & figure {
-      margin: 0;
+      margin: .5em;
+      border: 1px solid black;
+      padding: .5em;
+    }
+
+    & figcaption {
+      font-family: 'Cabin', sans-serif;
+      font-size: 0.66em;
+      padding-top: 0.66em;
+      line-height: 1.33em;
+      letter-spacing: 0.033em;
     }
   }
 </style>
