@@ -14,3 +14,15 @@
   </main>
 </template>
 
+<style>
+  .malbahack {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    & h1 {
+      font-family: 'Brazil Pixo Reto', 'sans-serif';
+      margin: 0;
+    }
+  }
+</style>
