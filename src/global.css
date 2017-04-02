@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Cabin';
+  src: url('Cabin-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
   height: 100%;

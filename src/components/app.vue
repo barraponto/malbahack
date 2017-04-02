@@ -16,10 +16,9 @@
 
 <style>
   .malbahack {
-    display: flex;
-    flex-direction: column;
     height: 100%;
-    padding: 1em;
+    padding: 1em 3em 1em 1em;
+    overflow: scroll;
 
     & h1 {
       font-family: 'Brazil Pixo Reto', 'sans-serif';
