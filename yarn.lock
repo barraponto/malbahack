@@ -3175,10 +3175,6 @@ klaw@^1.0.0:
   optionalDependencies:
     graceful-fs "^4.1.9"
 
-known-css-properties@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/known-css-properties/-/known-css-properties-0.0.6.tgz#71a0b8fde1b6e3431c471efbc3d9733faebbcfbf"
-
 known-css-properties@^0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/known-css-properties/-/known-css-properties-0.0.7.tgz#9104343a2adfd8ef3b07bdee7a325e4d44ed9371"
@@ -3354,6 +3350,12 @@ markdown-to-json@^0.5.1:
     lodash.truncate "^4.4.2"
     moment "^2.17.1"
     yaml-front-matter "^3.4.0"
+
+markdown@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/markdown/-/markdown-0.5.0.tgz#28205b565a8ae7592de207463d6637dc182722b2"
+  dependencies:
+    nopt "~2.1.1"
 
 math-expression-evaluator@^1.2.14:
   version "1.2.16"
@@ -3774,6 +3776,12 @@ nopt@^4.0.1:
   dependencies:
     abbrev "1"
     osenv "^0.1.4"
+
+nopt@~2.1.1:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/nopt/-/nopt-2.1.2.tgz#6cccd977b80132a07731d6e8ce58c2c8303cf9af"
+  dependencies:
+    abbrev "1"
 
 nopt@~3.0.1:
   version "3.0.6"
@@ -5381,7 +5389,7 @@ style-search@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/style-search/-/style-search-0.1.0.tgz#7958c793e47e32e07d2b5cafe5c0bf8e12e77902"
 
-stylehacks@^2.3.0, stylehacks@^2.3.2:
+stylehacks@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/stylehacks/-/stylehacks-2.3.2.tgz#64c83e0438a68c9edf449e8c552a7d9ab6009b0b"
   dependencies:
@@ -5418,7 +5426,7 @@ stylelint-webpack-plugin@^0.7.0:
     ramda "^0.23.0"
     stylelint "^7.7.0"
 
-stylelint@^7.10.0:
+stylelint@^7.10.0, stylelint@^7.7.0:
   version "7.10.0"
   resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-7.10.0.tgz#7950e443001bfc3a2e838f5637b499ad0b621a5f"
   dependencies:
@@ -5456,45 +5464,6 @@ stylelint@^7.10.0:
     string-width "^2.0.0"
     style-search "^0.1.0"
     stylehacks "^2.3.2"
-    sugarss "^0.2.0"
-    svg-tags "^1.0.0"
-    table "^4.0.1"
-
-stylelint@^7.7.0:
-  version "7.9.0"
-  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-7.9.0.tgz#b8d9ea20f887ab351075c6aded9528de24509327"
-  dependencies:
-    autoprefixer "^6.0.0"
-    balanced-match "^0.4.0"
-    chalk "^1.1.1"
-    colorguard "^1.2.0"
-    cosmiconfig "^2.1.1"
-    doiuse "^2.4.1"
-    execall "^1.0.0"
-    get-stdin "^5.0.0"
-    globby "^6.0.0"
-    globjoin "^0.1.4"
-    html-tags "^1.1.1"
-    ignore "^3.2.0"
-    known-css-properties "^0.0.6"
-    lodash "^4.17.4"
-    log-symbols "^1.0.2"
-    meow "^3.3.0"
-    micromatch "^2.3.11"
-    normalize-selector "^0.2.0"
-    postcss "^5.0.20"
-    postcss-less "^0.14.0"
-    postcss-media-query-parser "^0.2.0"
-    postcss-reporter "^3.0.0"
-    postcss-resolve-nested-selector "^0.1.1"
-    postcss-scss "^0.4.0"
-    postcss-selector-parser "^2.1.1"
-    postcss-value-parser "^3.1.1"
-    resolve-from "^2.0.0"
-    specificity "^0.3.0"
-    string-width "^2.0.0"
-    style-search "^0.1.0"
-    stylehacks "^2.3.0"
     sugarss "^0.2.0"
     svg-tags "^1.0.0"
     table "^4.0.1"

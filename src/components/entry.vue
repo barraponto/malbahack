@@ -1,8 +1,15 @@
 <script>
+  import {markdown} from 'markdown';
+
   export default {
     name: 'Entry',
     data() {
       return {};
+    },
+    computed: {
+      compiledEntry: function() {
+        return markdown.toHTML(this.entry.content);
+      },
     },
     props: ['id', 'entry'],
   };
@@ -11,7 +18,7 @@
 <template>
   <article class="entry">
     <h1>{{ entry.title }}</h1>
-    <div class="content">{{ entry.content }}</div>
+    <div class="content" v-html="compiledEntry"></div>
     <figure v-for="picture in entry.pictures">
       <img :src="picture.file">
       <figcaption>{{ picture.blurb }}</figcaption>
@@ -34,9 +41,9 @@
     }
 
     & figure {
-      margin: .5em;
+      margin: 0.5em;
       border: 1px solid black;
-      padding: .5em;
+      padding: 0.5em;
     }
 
     & figcaption {
