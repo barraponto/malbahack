@@ -21,14 +21,17 @@
 
 <style>
   .malbahack {
-    & h1 {
-      font-family: 'Brazil Pixo Reto', 'sans-serif';
-      font-weight: normal;
-      font-size: 2.6em;
-      margin: 0 0 0.33em;
-    }
-
     & .index {
+      padding: 1em 1em 3em;
+      background-color: #f6f5f1;
+
+      & h1 {
+        font-family: 'Brazil Pixo Reto', 'sans-serif';
+        font-weight: normal;
+        font-size: 2.6em;
+        margin: 0 0 0.33em;
+      }
+
       & a {
         display: block;
         font-family: 'Brazil Pixo Reto';

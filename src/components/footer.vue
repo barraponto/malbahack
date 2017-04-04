@@ -36,8 +36,22 @@
 <style>
   .malbahack {
     & footer {
-      flex-basis: 4em;
-      flex-grow: 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 1em;
+
+      & h2, & a {
+        font-family: 'Brazil Pixo Reto', 'sans-serif';
+        font-weight: normal;
+        font-size: 2.6em;
+        margin: 0 0 0.33em;
+      }
+
+      & a {
+        padding: 0 0.5em;
+        display: inline-block;
+        text-decoration: none;
+      }
     }
   }
 </style>

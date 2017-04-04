@@ -33,7 +33,6 @@
 <style>
   .malbahack {
     height: 100%;
-    padding: 1em;
     overflow: scroll;
   }
 </style>

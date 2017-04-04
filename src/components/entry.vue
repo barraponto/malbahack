@@ -28,7 +28,16 @@
 
 <style>
   .malbahack {
-    article {
+    & article {
+      padding: 1em;
+
+      & h1 {
+        font-family: 'Brazil Pixo Reto', 'sans-serif';
+        font-weight: normal;
+        font-size: 2.6em;
+        margin: 0 0 0.33em;
+      }
+
       & .content {
         font-family: 'Cabin', sans-serif;
         line-height: 1.33em;
