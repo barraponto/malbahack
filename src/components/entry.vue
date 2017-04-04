@@ -17,12 +17,16 @@
 
 <template>
   <article>
-    <h1>{{ entry.title }}</h1>
-    <div class="content" v-html="compiled"></div>
-    <figure v-for="picture in entry.pictures">
-      <img :src="picture.file">
-      <figcaption>{{ picture.blurb }}</figcaption>
-    </figure>
+    <div class="content">
+      <h1>{{ entry.title }}</h1>
+      <div v-html="compiled"></div>
+    </div>
+    <div class="pictures">
+      <figure v-for="picture in entry.pictures">
+        <img :src="picture.file">
+        <figcaption>{{ picture.blurb }}</figcaption>
+      </figure>
+    </div>
   </article>
 </template>
 
@@ -32,10 +36,11 @@
       padding: 1em;
 
       & h1 {
+        margin: 0 0 0.66em;
+        line-height: 1;
         font-family: 'Brazil Pixo Reto', 'sans-serif';
         font-weight: normal;
         font-size: 2.6em;
-        margin: 0 0 0.33em;
       }
 
       & .content {

@@ -48,4 +48,34 @@
       }
     }
   }
+
+  @media (min-width: 1024px) {
+    .malbahack,
+    .malbahack.at-entry {
+      display: flex;
+      flex-direction: row;
+
+      & .index {
+        display: block;
+        flex-basis: 33%;
+        flex-grow: 1;
+      }
+
+      & article {
+        flex-basis: 66%;
+        flex-grow: 2;
+        display: flex;
+
+        & .content,
+        & .pictures {
+          flex-basis: 50%;
+        }
+      }
+
+      & footer {
+        display: none;
+      }
+    }
+  }
+
 </style>
