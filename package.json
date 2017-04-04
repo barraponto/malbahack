@@ -33,13 +33,13 @@
   "homepage": "https://github.com/barraponto/webpack-config#readme",
   "devDependencies": {
     "eslint": "^3.19.0",
-    "neutrino": "^5.2.0",
+    "neutrino": "^5.3.0",
     "neutrino-preset-cssnext": "^1.1.1",
     "neutrino-preset-eslint-google": "^2.0.1",
     "neutrino-preset-stylelint-standard": "^2.0.0",
     "neutrino-preset-vue": "^2.1.0",
-    "neutrino-preset-web": "^5.2.0",
-    "stylelint": "^7.10.0"
+    "neutrino-preset-web": "^5.3.0",
+    "stylelint": "^7.10.1"
   },
   "dependencies": {
     "markdown": "^0.5.0",
