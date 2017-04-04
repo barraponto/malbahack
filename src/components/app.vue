@@ -9,6 +9,11 @@
       'mh-index': Index,
       'mh-footer': Footer,
     },
+    computed: {
+      atEntry() {
+        return this.$route.name === 'entry';
+      },
+    },
     data() {
       return {
         entries,
@@ -21,7 +26,7 @@
   <main class="malbahack">
     <mh-index :data="entries"></mh-index>
     <router-view></router-view>
-    <mh-footer v-if="$route.name === 'entry'" :data="entries"></mh-footer>
+    <mh-footer v-if="atEntry" :data="entries"></mh-footer>
   </main>
 </template>
 
