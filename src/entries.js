@@ -12,5 +12,5 @@ const entries = Object.keys(data)
 
 const about = entries.find((entry) => entry.basename === 'about');
 
-export default entries.filter((key) => key !== 'about');
+export default entries.filter((entry) => entry.basename !== 'about');
 export {about};
