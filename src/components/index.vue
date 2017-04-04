@@ -9,17 +9,26 @@
 </script>
 
 <template>
-  <nav>
-    <router-link v-for="item in data" :key="item.basename"
-      :to="{ name: 'entry', params: { id: item.basename } }">
-      {{item.title}}
-    </router-link>
-  </nav>
+    <nav class="index">
+      <h1>Malbahack</h1>
+      <router-link v-for="item in data" :key="item.basename"
+        :to="{ name: 'entry', params: { id: item.basename } }"
+        :class="{ active: item.basename === $route.params.id }">
+        {{item.title}}
+      </router-link>
+    </nav>
 </template>
 
 <style>
   .malbahack {
-    & nav {
+    & h1 {
+      font-family: 'Brazil Pixo Reto', 'sans-serif';
+      font-weight: normal;
+      font-size: 2.6em;
+      margin: 0 0 0.33em;
+    }
+
+    & .index {
       & a {
         display: block;
         font-family: 'Brazil Pixo Reto';

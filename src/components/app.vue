@@ -1,30 +1,34 @@
 <script>
+  import entries from '../entries';
+  import Index from './index.vue';
+  import Footer from './footer.vue';
+
   export default {
     name: 'App',
+    components: {
+      'mh-index': Index,
+      'mh-footer': Footer,
+    },
     data() {
-      return {};
+      return {
+        entries,
+      };
     },
   };
 </script>
 
 <template>
   <main class="malbahack">
-    <h1>Malbahack</h1>
+    <mh-index :data="entries"></mh-index>
     <router-view></router-view>
+    <mh-footer v-if="$route.name === 'entry'" :data="entries"></mh-footer>
   </main>
 </template>
 
 <style>
   .malbahack {
     height: 100%;
-    padding: 1em 3em 1em 1em;
+    padding: 1em;
     overflow: scroll;
-
-    & h1 {
-      font-family: 'Brazil Pixo Reto', 'sans-serif';
-      font-weight: normal;
-      font-size: 2.6em;
-      margin: 0 0 0.33em;
-    }
   }
 </style>
