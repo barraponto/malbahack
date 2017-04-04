@@ -53,6 +53,7 @@
     .malbahack,
     .malbahack.at-entry {
       display: flex;
+      min-height: 100%;
       flex-direction: row;
 
       & .index {
