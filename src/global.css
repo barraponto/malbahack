@@ -29,4 +29,17 @@ html {
 
 body {
   margin: 0;
+  color: #00212d;
+}
+
+a {
+  color: #fd098f;
+
+  &:visited {
+    color: #a3181d;
+  }
+
+  &:active {
+    color: #4f001a;
+  }
 }
