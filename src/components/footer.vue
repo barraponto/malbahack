@@ -10,10 +10,13 @@
           (entry) => entry.basename === this.$route.params.id);
       },
       nextEntry() {
-        return (this.index + 1 in this.data) ? this.index + 1 : false;
+        const nextIndex = this.index + 1;
+        return (nextIndex in this.data) ? this.data[nextIndex].basename : false;
       },
       previousEntry() {
-        return (this.index - 1 in this.data) ? this.index - 1 : false;
+        const previousIndex = this.index - 1;
+        return (previousIndex in this.data) ?
+         this.data[previousIndex].basename : false;
       },
     },
   };
@@ -21,12 +24,16 @@
 
 <template>
   <footer>
-    <h2>Malbahack</h2>
+    <router-link :to="{ name: 'index' }">
+      Malbahack
+    </router-link>
     <nav>
-      <router-link :to="{ name: 'entry', params: { id: previousEntry } }">
+      <router-link v-if="previousEntry"
+        :to="{ name: 'entry', params: { id: previousEntry } }">
         &lt;
       </router-link>
-      <router-link :to="{ name: 'entry', params: { id: nextEntry } }">
+      <router-link v-if="nextEntry"
+        :to="{ name: 'entry', params: { id: nextEntry } }">
         &gt;
       </router-link>
     </nav>
