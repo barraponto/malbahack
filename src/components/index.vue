@@ -22,10 +22,11 @@
 <style>
   .malbahack {
     & .index {
-      padding: 1em 1em 3em;
+      padding: 1em 0 3em;
       background-color: #f6f5f1;
 
       & h1 {
+        padding: 0 1rem;
         font-family: 'Brazil Pixo Reto', 'sans-serif';
         font-weight: normal;
         font-size: 2.6em;
@@ -34,11 +35,15 @@
 
       & a {
         display: block;
+        padding: 0.33em 1rem;
         font-family: 'Brazil Pixo Reto';
         font-size: 2.6em;
         line-height: 1em;
         text-decoration: none;
-        margin: 0.33em 0;
+
+        &:hover {
+          background-color: #d7d8d3;
+        }
       }
     }
   }

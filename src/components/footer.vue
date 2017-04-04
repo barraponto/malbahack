@@ -46,18 +46,28 @@
       display: flex;
       justify-content: space-between;
       padding: 1em;
+      background-color: #f6f5f1;
 
-      & h2, & a {
+      & a {
         font-family: 'Brazil Pixo Reto', 'sans-serif';
         font-weight: normal;
         font-size: 2.6em;
         margin: 0 0 0.33em;
+        text-decoration: none;
       }
 
-      & a {
-        padding: 0 0.5em;
-        display: inline-block;
-        text-decoration: none;
+      @nest & > a {
+        color: #00212d;
+        display: block;
+      }
+
+      & nav {
+        display: flex;
+
+        & a {
+          padding: 0 0.5em;
+          line-height: 1;
+        }
       }
     }
   }

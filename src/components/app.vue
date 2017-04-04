@@ -23,7 +23,7 @@
 </script>
 
 <template>
-  <main class="malbahack">
+  <main class="malbahack" :class="{ 'at-entry': atEntry }">
     <mh-index :data="entries"></mh-index>
     <router-view></router-view>
     <mh-footer v-if="atEntry" :data="entries"></mh-footer>
@@ -32,7 +32,20 @@
 
 <style>
   .malbahack {
-    height: 100%;
-    overflow: scroll;
+    &.at-entry {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      & .index {
+        display: none;
+      }
+
+      /* router-view resolves to article */
+      & article {
+        overflow-y: scroll;
+        flex-basis: 100%;
+      }
+    }
   }
 </style>
