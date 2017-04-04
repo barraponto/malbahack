@@ -1,0 +1,21 @@
+/* TEAM */
+Hacker: Capi Etheriel
+Site: https://barraponto.blog.br/
+Twitter: barraponto
+Github: barraponto
+Location: São Paulo, Brazil
+
+/* THANKS */
+Museu de Arte Latinoamericano de Buenos Aires (MALBA) for our inspiration http://www.glosario.malba.org.ar/
+Mozilla for the amazing build tool Neutrino https://neutrino.js.org/
+Scott Stanfiled for markdown-to-json and the patience to review my pull requests https://github.com/scottstanfield/markdown-to-json
+Any Palacios for the beautiful CC-licensed GRAFITTI color palette http://www.colourlovers.com/palette/1574124/GRAFITTI
+Tony de Marco, from Just In Type, for the impressive work on Brazil Pixo Reto (and also for teaching me how to draw) https://www.myfonts.com/fonts/justintype/brazil-pixo-reto/
+Impallari Type for the steady work on open source fonts, including Cabin Sans https://fonts.google.com/specimen/Cabin
+Rumos Itaú Cultural for sponsoring the work as part of the "A HISTÓRIA DA *RTE!" project.
+
+/* SITE */
+Last update: 2017-04 (see github)
+Standards: HTML5, CSS4, ES6
+Components: Vue, Markdown, PostCSS, cssnext
+Software: ESLint, Stylelint, Webpack, Babel, Neutrino, Atom, Vim
