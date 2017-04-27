@@ -1,12 +1,13 @@
 {
   "name": "malbahack",
   "version": "0.1.0",
-  "description": "Malba Glosario reverse-engineered",
+  "description": "A historia da *rte",
   "main": "src/index.js",
   "scripts": {
     "start": "npm run data && neutrino start",
     "build": "npm run data && neutrino build",
     "data": "m2j --content --outfile src/data.json data/*.md",
+    "deploy": "netlify deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "neutrino": {
@@ -33,6 +34,7 @@
   "homepage": "https://github.com/barraponto/webpack-config#readme",
   "devDependencies": {
     "eslint": "^3.19.0",
+    "netlify-cli": "^1.2.2",
     "neutrino": "^5.3.0",
     "neutrino-preset-cssnext": "^1.1.1",
     "neutrino-preset-eslint-google": "^2.0.1",
