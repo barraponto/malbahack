@@ -3,6 +3,7 @@ import entries from '../entries';
 import Glossary from './glossary.vue';
 import Entry from './entry.vue';
 import Splash from './splash.vue';
+import About from './about.vue';
 
 const glossaryRoutes = (entries, type, path, title) => ({
   path,
@@ -36,7 +37,13 @@ export default new VueRouter({
       component: Splash,
       props: {},
     },
-    glossaryRoutes(entries, 'object', '/objetos', 'Objetos'),
-    glossaryRoutes(entries, 'experience', '/experiencias', 'Experiências'),
+    {
+      name: 'about-index',
+      path: '/about',
+      component: About,
+      props: {},
+    },
+    glossaryRoutes(entries, 'object', '/objetos', 'Objetos[11]'),
+    glossaryRoutes(entries, 'experience', '/experiencias', 'Experiências[12]'),
   ],
 });

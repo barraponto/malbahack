@@ -11,7 +11,8 @@
 <template>
   <div>
     <h1>
-      A HISTÓRIA DA *RTE[1] é[2] a área do conhecimento[3] humano[4] que
+      A HISTÓRIA DA *RTE<router-link :to="{ name: 'about-index' }">[1]</router-link>
+      é[2] a área do conhecimento[3] humano[4] que
       constrói[5] uma[6] narrativa[7] cronológica[8] sobre[9] a criação[10] de
       objetos<router-link :to="{ name: 'object-index' }">[11]</router-link> e
       experiências<router-link :to="{ name: 'experience-index'}">[12]</router-link>
