@@ -1,7 +1,12 @@
 <script>
   export default {
     name: 'Index',
-    props: ['data'],
+    props: ['data', 'title', 'type'],
+    computed: {
+      entries() {
+        return this.data.filter((entry) => entry.basename !== 'about');
+      },
+    },
     data() {
       return {};
     },
@@ -10,9 +15,9 @@
 
 <template>
     <nav class="index">
-      <h1>Malbahack</h1>
-      <router-link v-for="item in data" :key="item.basename"
-        :to="{ name: 'entry', params: { id: item.basename } }"
+      <h1>{{title}}</h1>
+      <router-link v-for="item in entries" :key="item.basename"
+        :to="{ name: type, params: { id: item.basename } }"
         :class="{ active: item.basename === $route.params.id }">
         {{item.title}}
       </router-link>

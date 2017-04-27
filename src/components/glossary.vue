@@ -1,0 +1,81 @@
+<script>
+  import Index from './index.vue';
+  import Footer from './footer.vue';
+
+  export default {
+    name: 'Glossary',
+    props: ['entries', 'title', 'type'],
+    components: {
+      'mh-index': Index,
+      'mh-footer': Footer,
+    },
+    computed: {
+      atEntry() {
+        return this.$route.name === this.type;
+      },
+    },
+    data() {
+      return {};
+    },
+  };
+</script>
+
+<template>
+  <main class="malbahack" :class="{ 'at-entry': atEntry }">
+    <mh-index :data="entries" :title="title" :type="type"></mh-index>
+    <router-view></router-view>
+    <mh-footer v-if="atEntry"
+      :data="entries" :title="title" :type="type"></mh-footer>
+  </main>
+</template>
+
+<style>
+  .malbahack {
+    &.at-entry {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      & .index {
+        display: none;
+      }
+
+      /* router-view resolves to article */
+      & article {
+        overflow-y: scroll;
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .malbahack,
+    .malbahack.at-entry {
+      display: flex;
+      min-height: 100%;
+      flex-direction: row;
+
+      & .index {
+        display: block;
+        flex-basis: 33%;
+        flex-grow: 1;
+      }
+
+      & article {
+        flex-basis: 66%;
+        flex-grow: 2;
+        display: flex;
+
+        & .content,
+        & .pictures {
+          flex-basis: 50%;
+        }
+      }
+
+      & footer {
+        display: none;
+      }
+    }
+  }
+
+</style>

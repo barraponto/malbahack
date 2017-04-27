@@ -10,7 +10,4 @@ const entries = Object.keys(data)
   .map((entry) => Object.assign(
     entry, {pictures: entry.pictures.map(loadFiles)}));
 
-const about = entries.find((entry) => entry.basename === 'about');
-
-export default entries.filter((entry) => entry.basename !== 'about');
-export {about};
+export default entries;

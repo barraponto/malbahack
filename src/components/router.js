@@ -1,22 +1,42 @@
 import VueRouter from 'vue-router';
-import entries, {about} from '../entries';
+import entries from '../entries';
+import Glossary from './glossary.vue';
 import Entry from './entry.vue';
+import Splash from './splash.vue';
 
-export default new VueRouter({
-  routes: [
+const glossaryRoutes = (entries, type, path, title) => ({
+  path,
+  component: Glossary,
+  props: (route) => ({entries, title, type}),
+  children: [
     {
-      name: 'index',
+      name: `${type}-index`,
       path: '/',
       component: Entry,
-      props: {entry: about},
+      props: {
+        entry: entries.find((entry) => entry.basename === 'about'),
+      },
     },
     {
-      name: 'entry',
-      path: '/entry/:id',
+      name: type,
+      path: ':id',
       component: Entry,
       props: (route) => ({
         entry: entries.find((entry) => entry.basename === route.params.id),
       }),
     },
+  ],
+});
+
+export default new VueRouter({
+  routes: [
+    {
+      name: 'splash',
+      path: '/',
+      component: Splash,
+      props: {},
+    },
+    glossaryRoutes(entries, 'object', '/objetos', 'Objetos'),
+    glossaryRoutes(entries, 'experience', '/experiencias', 'Experiências'),
   ],
 });

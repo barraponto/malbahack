@@ -3,20 +3,24 @@
     data() {
       return {};
     },
-    props: ['data'],
+    props: ['data', 'title', 'type'],
     computed: {
+      entries() {
+        return this.data.filter((entry) => entry.basename !== 'about');
+      },
       index() {
-        return this.data.findIndex(
+        return this.entries.findIndex(
           (entry) => entry.basename === this.$route.params.id);
       },
       nextEntry() {
         const nextIndex = this.index + 1;
-        return (nextIndex in this.data) ? this.data[nextIndex].basename : false;
+        return (nextIndex in this.entries) ?
+          this.entries[nextIndex].basename : false;
       },
       previousEntry() {
         const previousIndex = this.index - 1;
-        return (previousIndex in this.data) ?
-         this.data[previousIndex].basename : false;
+        return (previousIndex in this.entries) ?
+          this.entries[previousIndex].basename : false;
       },
     },
   };
@@ -24,16 +28,16 @@
 
 <template>
   <footer>
-    <router-link :to="{ name: 'index' }">
-      Malbahack
+    <router-link :to="{ name: `${type}-index` }">
+      {{title}}
     </router-link>
     <nav>
       <router-link v-if="previousEntry"
-        :to="{ name: 'entry', params: { id: previousEntry } }">
+        :to="{ name: type, params: { id: previousEntry } }">
         &lt;
       </router-link>
       <router-link v-if="nextEntry"
-        :to="{ name: 'entry', params: { id: nextEntry } }">
+        :to="{ name: type, params: { id: nextEntry } }">
         &gt;
       </router-link>
     </nav>
