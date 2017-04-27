@@ -35,12 +35,12 @@
   "devDependencies": {
     "eslint": "^3.19.0",
     "netlify-cli": "^1.2.2",
-    "neutrino": "^5.3.0",
+    "neutrino": "^5.7.0",
     "neutrino-preset-cssnext": "^1.1.1",
     "neutrino-preset-eslint-google": "^2.0.1",
     "neutrino-preset-stylelint-standard": "^2.0.0",
     "neutrino-preset-vue": "^2.1.0",
-    "neutrino-preset-web": "^5.3.0",
+    "neutrino-preset-web": "^5.7.0",
     "stylelint": "^7.10.1"
   },
   "dependencies": {
