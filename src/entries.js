@@ -1,6 +1,6 @@
-import data from './data.json';
+import data from './data/entries.json';
 
-const picturesFolder = require.context('../data/images', true);
+const picturesFolder = require.context('../data/entries/images', true);
 
 const loadFiles = (picture) => Object.assign(
   picture, {file: picturesFolder(`./${picture.file}`, true)});

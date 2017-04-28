@@ -6,7 +6,8 @@
   "scripts": {
     "start": "npm run data && neutrino start",
     "build": "npm run data && neutrino build",
-    "data": "m2j --content --outfile src/data.json data/*.md",
+    "data": "run-s data:*",
+    "data:entries": "m2j --content --outfile src/data/entries.json data/entries/*.md",
     "deploy": "netlify deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -41,6 +42,7 @@
     "neutrino-preset-stylelint-standard": "^2.0.0",
     "neutrino-preset-vue": "^2.1.0",
     "neutrino-preset-web": "^5.7.0",
+    "npm-run-all": "^4.0.2",
     "stylelint": "^7.10.1"
   },
   "dependencies": {
