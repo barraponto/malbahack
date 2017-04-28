@@ -3,6 +3,7 @@ import getEntries from './entries';
 import glossaryRoutes from './glossary';
 import Splash from './components/splash.vue';
 import About from './components/about.vue';
+import AboutItem from './components/about-item.vue';
 
 import entries from './data/entries.json';
 const entriesFolder = require.context('../data/entries/images');
@@ -26,8 +27,12 @@ export default new VueRouter({
       children: [
         {
           name: 'about-item',
-          path: '/:id',
-          props: {entries: getEntries(about, aboutFolder)},
+          path: ':id',
+          component: AboutItem,
+          props: (route) => ({
+            entry: getEntries(about, aboutFolder)
+              .find((entry) => entry.basename === route.params.id),
+          }),
         },
       ],
     },

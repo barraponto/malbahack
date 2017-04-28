@@ -10,7 +10,7 @@
 <template>
   <main class="about">
     <router-view class="about-detail"></router-view>
-    <div class="about-text">
+    <article class="about-text">
       <h1>A História da *rte[1]</h1>
 
       <p>O projeto A HISTÓRIA DA *RTE é uma
@@ -23,7 +23,9 @@
       artistas, educadores e interessados reivindiquem outras leituras para a
       História ou mesmo uma transformação radical do campo.</p>
 
-      <p>O projeto nasceu quando um dos integrantes do projeto, o artista Bruno
+      <p>O projeto nasceu quando um dos
+      <router-link :to="{name: 'about-item', params: {id: 'ficha-tecnica'}}">integrantes</router-link>
+        do projeto, o artista Bruno
       Moreschi, começou a ministrar uma disciplina de História da Arte na
       Unicamp. A bibliografia prevista para o curso não abordava as produções
       realizadas por mulheres, africanos e seus descendentes na diáspora e
@@ -87,7 +89,7 @@
       para que elas também ocorram em públicos mais amplos.</p>
 
       <p>Boa Visita!</p>
-    </div>
+    </article>
   </main>
 </template>
 
@@ -101,7 +103,22 @@
     letter-spacing: 0.033em;
 
     & h1 {
-      font-size: 1.66em;
+      text-transform: uppercase;
+      font-size: 1.33em;
+    }
+
+    & .about-detail,
+    & .about-text {
+      flex-basis: 20em;
+    }
+
+    & .about-detail {
+      flex-grow: 2;
+      margin-right: 2em;
+    }
+
+    & .about-text {
+      flex-grow: 5;
     }
   }
 </style>
