@@ -8,7 +8,7 @@
 </script>
 
 <template>
-  <router-view class='malbahack'></router-view>
+  <router-view></router-view>
 </template>
 
 <style>
