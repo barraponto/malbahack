@@ -42,6 +42,13 @@ export default new VueRouter({
       path: '/about',
       component: About,
       props: {},
+      children: [
+        {
+          name: 'about-item',
+          path: '/:id',
+          props: {},
+        },
+      ],
     },
     glossaryRoutes(entries, 'object', '/objetos', 'Objetos[11]'),
     glossaryRoutes(entries, 'experience', '/experiencias', 'Experiências[12]'),
