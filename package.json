@@ -4,12 +4,16 @@
   "description": "A historia da *rte",
   "main": "src/index.js",
   "scripts": {
-    "start": "npm run data && neutrino start",
-    "build": "npm run data && neutrino build",
-    "data": "run-s data:*",
-    "data:entries": "m2j --content --outfile src/data/entries.json data/entries/*.md",
-    "data:about": "m2j --content --outfile src/data/about.json data/about/*.md",
-    "deploy": "netlify deploy",
+    "build": "run-s build:*",
+    "watch": "run-p watch:*",
+    "deploy": "run-s build deploy:*",
+    "build:entries": "m2j --content --outfile src/data/entries.json data/entries/*.md",
+    "watch:entries": "chokidar data/entries/ -c \"npm run build:entries\"",
+    "build:about": "m2j --content --outfile src/data/about.json data/about/*.md",
+    "watch:about": "chokidar data/about/ -c \"npm run build:about\"",
+    "build:neutrino": "neutrino build",
+    "watch:neutrino": "neutrino start",
+    "deploy:netlify": "netlify deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "neutrino": {
@@ -35,6 +39,7 @@
   },
   "homepage": "https://github.com/barraponto/webpack-config#readme",
   "devDependencies": {
+    "chokidar-cli": "^1.2.0",
     "eslint": "^3.19.0",
     "netlify-cli": "^1.2.2",
     "neutrino": "^5.7.0",
@@ -50,6 +55,7 @@
     "markdown": "^0.5.0",
     "markdown-to-json": "^0.5.1",
     "normalize.css": "^6.0.0",
+    "velocity-animate": "^1.5.0",
     "vue": "^2.2.6",
     "vue-router": "^2.3.1"
   }

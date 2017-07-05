@@ -1,20 +1,31 @@
 <script>
+  import AboutLink from './about-link.vue';
+
+  const toggleBodyScrolling = () => {
+  };
+
   export default {
     name: 'About',
+    components: {
+      'about-link': AboutLink,
+    },
     data() {
       return {};
+    },
+    beforeRouterUpdate(to, from, next) {
+      toggleBodyScrolling(to);
+      next();
     },
   };
 </script>
 
 <template>
   <main class="about">
-    <router-view class="about-detail"></router-view>
     <article class="about-text">
       <h1>A História da *rte[1]</h1>
 
       <p>O projeto A HISTÓRIA DA *RTE é uma
-      <router-link :to="{name: 'about-item', params: {id: 'constatacao'}}">constatação</router-link>.
+      <about-link target="constatacao">constatação</about-link>.
       Apresenta dados quantitativos sobre todos os artistas encontrados em 11
       livros utilizados em cursos de graduação de Artes Visuais no Brasil. Com o
       intuito de mensurar o cenário excludente da História da Arte oficial
@@ -24,18 +35,18 @@
       História ou mesmo uma transformação radical do campo.</p>
 
       <p>O projeto nasceu quando um dos
-      <router-link :to="{name: 'about-item', params: {id: 'ficha-tecnica'}}">integrantes</router-link>
-        do projeto, o artista Bruno
-      Moreschi, começou a ministrar uma disciplina de História da Arte na
-      Unicamp. A bibliografia prevista para o curso não abordava as produções
-      realizadas por mulheres, africanos e seus descendentes na diáspora e
-      artistas nascidos na América Latina. Que história é essa que aprendemos e
-      estamos ensinando aos alunos? Objetivando quantificar os aspectos já
-      consolidados na narrativa da História da Arte, Bruno e os pesquisadores
-      Amália dos Santos e Gabriel Pereira iniciaram A HISTÓRIA DA *RTE, projeto
-      premiado e financiado pelo programa Rumos Itaú Cultural (2016-2017) e com
-      produção da Agência Bólide formada por Laura Maringoni, Marcela Amaral e
-      Mônica Novaes Esmanhotto.</p>
+      <about-link target="ficha-tecnica">integrantes</about-link>
+      do projeto, o artista Bruno Moreschi, começou a ministrar uma disciplina
+      de História da Arte na Unicamp. A bibliografia prevista para o curso não
+      abordava as produções realizadas por mulheres, africanos e seus
+      descendentes na diáspora e artistas nascidos na América Latina. Que
+      história é essa que aprendemos e estamos ensinando aos alunos?
+      Objetivando quantificar os aspectos já consolidados na narrativa da
+      História da Arte, Bruno e os pesquisadores Amália dos Santos e Gabriel
+      Pereira iniciaram A HISTÓRIA DA *RTE, projeto premiado e financiado pelo
+      programa Rumos Itaú Cultural (2016-2017) e com produção da Agência
+      Bólide formada por Laura Maringoni, Marcela Amaral e Mônica Novaes
+      Esmanhotto.</p>
 
       <p>A pesquisa teve início com a listagem, em formato de tabela, de todos
       os artistas encontrados nos 11 livros de História da Arte e as seguintes
@@ -90,12 +101,16 @@
 
       <p>Boa Visita!</p>
     </article>
+    <router-view></router-view>
   </main>
 </template>
 
 <style>
+  .no-scroll {
+    overflow: hidden;
+  }
+
   .about {
-    display: flex;
     padding: 1em;
     font-size: 1.33em;
     font-family: 'Cabin', sans-serif;
@@ -105,20 +120,6 @@
     & h1 {
       text-transform: uppercase;
       font-size: 1.33em;
-    }
-
-    & .about-detail,
-    & .about-text {
-      flex-basis: 20em;
-    }
-
-    & .about-detail {
-      flex-grow: 2;
-      margin-right: 2em;
-    }
-
-    & .about-text {
-      flex-grow: 5;
     }
   }
 </style>
